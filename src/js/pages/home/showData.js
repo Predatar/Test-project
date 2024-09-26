@@ -60,7 +60,7 @@ export default async function showData() {
 				<span class="product-option__button-text">Download</span>
 				<span class="icon">
 					<svg width="30" height="30">
-						<use xlink:href="/sprites/sprite.svg#download"></use>
+						<use xlink:href="./sprites/sprite.svg#download"></use>
 					</svg>
 				</span>
 			</a>
