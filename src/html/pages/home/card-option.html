@@ -1,0 +1,46 @@
+<div class="product-option">
+	<div class="product-option__price-wrap">
+		<div class="product-option__price">
+			<span class="product-option__price product-option__price_main">
+				${{price}}
+			</span>
+
+			<span class="product-option__price product-option__price_sub">
+				{{period}}
+			</span>
+
+			{{#if oldPrice}}
+				<span class="product-option__old-price">
+					${{oldPrice}}
+				</span>
+			{{/if}}
+		</div>
+		
+		{{#if isBest}} 
+			<p class="product-option__best">
+				Best value
+			</p>
+		{{/if}}
+
+		{{#if isDiscount}} 
+			<div class="product-option__discount img">
+				<img src="/images/discount.webp" alt="50% off">
+			</div>
+		{{/if}}
+	</div>
+
+	<p class="product-option__name">
+		{{name}}
+	</p>
+
+	<p class="product-option__terms">
+		{{term}}
+	</p>
+
+	<a href="{{link}}" download class="product-option__button">
+		<span class="product-option__button-text">Download</span>
+		<span class="icon">
+			{{> modules/svg id="download" width=30 height=30}}
+		</span>
+	</a>
+</div>

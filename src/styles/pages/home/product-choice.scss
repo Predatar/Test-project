@@ -1,0 +1,25 @@
+.product-choice {
+  margin-top: clamp(50px, 10vw, 149px);
+  margin-bottom: clamp(100px, 10vw, 305px);
+
+  &__title {
+    @include fontStyle(48, 48, 700);
+    font-size: clamp(32px, 5vw, 48px);
+		font-family: "Bebas Neue";
+    text-align: center;
+  }
+
+  &__options {
+		margin-top: 108px;
+
+    @extend %grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    column-gap: 30px;
+    row-gap: 100px;
+    justify-items: center;
+
+    @include media-down(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

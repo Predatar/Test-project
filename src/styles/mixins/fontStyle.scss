@@ -1,0 +1,9 @@
+@mixin fontStyle($fontSize, $lineHeight: null, $fontWeight: null) {
+  font-size: $fontSize + px;
+  @if $lineHeight != null {
+    line-height: calc($lineHeight / $fontSize);
+  }
+  @if $fontWeight != null {
+    font-weight: $fontWeight;
+  }
+}

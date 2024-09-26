@@ -1,0 +1,48 @@
+@import '../mixins/fontStyle';
+@import '../mixins/media';
+
+.hidden {
+  overflow: hidden;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  --side-padding: 20px;
+  max-width: calc(1140px + 2 * var(--side-padding));
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
+
+  @include media-down(sm) {
+    --side-padding: 15px;
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.icon {
+  width: fit-content;
+  height: fit-content;
+
+  svg {
+    display: flex;
+    fill: currentcolor;
+  }
+}
+
+.img {
+  img {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+  }
+}
