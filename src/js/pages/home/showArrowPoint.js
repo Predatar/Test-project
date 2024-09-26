@@ -1,6 +1,8 @@
 export default function showArrowPoint() {
   const arrowPoint = document.querySelector('.arrow-pointer')
   const productOptionBtn = document.querySelectorAll('.product-option__button')
+  const timeToOpen = 1500;
+  const timeToClose = 6000;
 
   productOptionBtn.forEach(elem =>
     elem.addEventListener('click', () => {
@@ -9,8 +11,8 @@ export default function showArrowPoint() {
 
         setTimeout(() => {
           arrowPoint.classList.remove('show')
-        }, 6000)
-      }, 1500)
+        }, timeToClose)
+      }, timeToOpen)
     })
   )
 }

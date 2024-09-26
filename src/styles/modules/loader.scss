@@ -1,25 +1,26 @@
 .loader-wrap {
-	width: 100%;
-  height: 100%;
   @extend %flex-center;
-	background: var(--black-40);
   @extend %absolute;
   top: 0;
   left: 0;
-	transform: translateY(100%);
-	transition: transform .2s;
-	
-	&.show {
-		transform: translateY(0);
-	}
+  width: 100%;
+  height: 100%;
+  background: var(--black-40);
+  transform: translateY(100%);
+  transition: transform 0.2s;
+
+  &.show {
+    transform: translateY(0);
+  }
 }
+
 .loader {
+  display: inline-block;
   width: 48px;
   height: 48px;
   border: 5px solid var(--white);
-  border-bottom-color: var(--yellow);
   border-radius: 50%;
-  display: inline-block;
+  border-bottom-color: var(--yellow);
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
@@ -28,6 +29,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }

@@ -1,40 +1,40 @@
 .product-option {
-  padding: 72px 0 25px;
-  max-width: 360px;
-  width: 100%;
-  height: min-content;
-  background: var(--dark-white);
-  @include fontStyle(18, 21.09);
   @extend %relative;
+  @include fontStyle(18, 21.09);
+  width: 100%;
+  max-width: 360px;
+  height: min-content;
+  padding: 72px 0 25px;
+  background: var(--dark-white);
 
   &__price-wrap {
-    width: 240px;
-    height: 100px;
     @extend %flex-center;
-    background: var(--white);
-    box-shadow: 0px 0px 4px 0px var(--black-40);
     @extend %absolute;
     top: -49px;
     left: 50%;
+    width: 240px;
+    height: 100px;
+    background: var(--white);
     transform: translateX(-50%);
+    box-shadow: 0 0 4px 0 var(--black-40);
   }
 
   &__best {
-    width: 80px;
-    height: 20px;
     @extend %flex-center;
-    background: var(--yellow);
-    @include fontStyle(12, 14.06, 500);
     @extend %absolute;
+    @include fontStyle(12, 14.06, 500);
     top: 0;
     right: 0;
+    width: 80px;
+    height: 20px;
+    background: var(--yellow);
   }
 
   &__discount {
     @extend %absolute;
+    pointer-events: none;
     top: -15px;
     left: -16px;
-    pointer-events: none;
     user-select: none;
   }
 
@@ -43,19 +43,19 @@
     font-family: 'Bebas Neue';
 
     &_sub {
-      margin-left: -5px;
       @include fontStyle(18);
+      margin-left: -5px;
     }
   }
 
   &__old-price {
-    font-family: 'Roboto';
-    @include fontStyle(16, 18.75, 400);
-    color: var(--gray);
-    text-decoration: line-through;
     @extend %absolute;
+    @include fontStyle(16, 18.75, 400);
     bottom: 10px;
     left: 50%;
+    font-family: Roboto;
+    color: var(--gray);
+    text-decoration: line-through;
     transform: translateX(-50%);
   }
 
@@ -69,21 +69,21 @@
   }
 
   &__button {
-    margin: 31px auto 0;
-    max-width: 190px;
-    width: 100%;
-    height: 50px;
     @extend %flex-aic;
-    border-radius: 50px;
-    background: var(--btn-gradient);
-    box-shadow: 0px 4px 4px 0px var(--black-40);
     @include fontStyle(18, 21.09, 500);
+    width: 100%;
+    max-width: 190px;
+    height: 50px;
+    margin: 31px auto 0;
+    border-radius: 50px;
     color: var(--white);
     text-transform: uppercase;
+    background: var(--btn-gradient);
+    box-shadow: 0 4px 4px 0 var(--black-40);
 
     &-text {
-      padding-left: 23px;
       width: 100%;
+      padding-left: 23px;
       text-align: center;
     }
 

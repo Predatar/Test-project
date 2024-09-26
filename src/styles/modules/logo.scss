@@ -1,6 +1,6 @@
 .logo {
   @include fontStyle(21, 24.61, 500);
   font-size: clamp(14px, 2vw, 21px);
-  text-transform: uppercase;
   color: var(--yellow);
+  text-transform: uppercase;
 }

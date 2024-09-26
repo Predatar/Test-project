@@ -14,8 +14,8 @@
 
 .container {
   --side-padding: 20px;
-  max-width: calc(1140px + 2 * var(--side-padding));
   width: 100%;
+  max-width: calc(1140px + 2 * var(--side-padding));
   margin: 0 auto;
   padding: 0 var(--side-padding);
 
@@ -42,7 +42,6 @@
   img {
     width: 100%;
     height: auto;
-
     object-fit: cover;
   }
 }

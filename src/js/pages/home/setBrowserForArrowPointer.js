@@ -8,8 +8,9 @@ export default function setBrowserForArrowPointer() {
 
   if (browser.includes('Chrome')) {
     const chromeMatch = browser.match(/Chrome\/(\d+)/)
+    const divisionVersion = 89;
 
-    if (+chromeMatch[1] >= 89) {
+    if (+chromeMatch[1] >= divisionVersion) {
       arrowPointer.classList.add('google')
     } else {
       arrowPointer.classList.add('mozilla')
