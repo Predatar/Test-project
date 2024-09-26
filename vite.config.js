@@ -99,7 +99,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: resolve(root, 'index.html'),
-        home: resolve(root, 'pages/home/index.html'),
       },
       output: {
         assetFileNames: ({ name }) => {

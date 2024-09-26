@@ -2,24 +2,71 @@
 <html lang="en">
 
 <head>
-  <meta name="description" content="Живі казки">
+  <meta name="description" content="top antivirus">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
   <link rel="stylesheet" href="./pages/home/style.scss">
   <link rel="icon" href="" type="image/svg+xml">
+
   <title>Home</title>
 </head>
 
 <body>
   <div class="wrapper">
     {{> common/header }}
-    <main class="main">
 
+    <main class="main">
+      <div class="container">
+        <section class="product-choice">
+          <h1 class="product-choice__title">
+            Thank you for choosing our product !
+          </h1>
+
+          <div class="product-choice__options">
+            <!-- {{> pages/home/card-option
+            price='1.02'
+            period='/per year'
+            isBest=true
+            name="McAfee® Total Protection"
+            term="1Year / 1-Device"
+            link='#'}}
+
+            {{> pages/home/card-option
+            price='39.99'
+            period='/per year'
+            name="McAfee® Total Protection"
+            term="3Year / 1-Device"
+            link='#'}}
+
+            {{> pages/home/card-option
+            price='4.99'
+            period='/mo'
+            oldPrice='9.99'
+            isDiscount=true
+            name="McAfee® Total Protection"
+            term="1-Device (Monthly)"
+            link='#'}} -->
+          </div>
+        </section>
+
+      </div>
     </main>
+
+    {{> modules/loader }}
+
+    <div class="arrow-pointer">
+      <p class="arrow-pointer__title">
+        Open
+      </p>
+
+      <p class="arrow-pointer__subtitle">
+        your downloaded file
+      </p>
+    </div>
+
     {{> common/footer }}
   </div>
+
   <script type="module" src="./pages/home/script.js"></script>
 </body>
 
