@@ -25,7 +25,7 @@
 					</p>`:""}
 
 				${i.price_key==="50%"?`<div class="product-option__discount img">
-					<img src="/images/discount.webp" alt="50% off">
+					<img src="./images/discount.webp" alt="50% off">
 				</div>`:""}
 			</div>
 
