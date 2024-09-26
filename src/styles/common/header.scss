@@ -1,6 +1,8 @@
 .header {
   padding: 11px 0 8px;
   background: var(--black);
+  @extend %relative;
+  z-index: 10;
 
   &__wrap {
     @extend %flex;

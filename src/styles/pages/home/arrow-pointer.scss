@@ -1,10 +1,16 @@
 .arrow-pointer {
   width: 160px;
   height: 135px;
-	display: none;
   background: var(--blue);
-	@extend %absolute;
   color: var(--white);
+  @extend %absolute;
+  top: -100%;
+  left: -100%;
+  transition: all 0.4s;
+
+  @include media-down(lg) {
+    display: none;
+  }
 
   &::after {
     content: '';
@@ -19,34 +25,42 @@
 
   &.google {
     padding-top: 6px;
-    top: 106px;
+    top: -200px;
     right: 12px;
+    left: auto;
+
+    &.show {
+      top: 106px;
+      animation: wave-down .8s linear infinite alternate;
+    }
 
     & {
-			box-shadow: 0px 4px 4px 0px var(--black-40);
-			
-			&::after {
-				top: -35%;
-			}
+      box-shadow: 0px 4px 4px 0px var(--black-40);
+
+      &::after {
+        top: -35%;
+      }
     }
   }
 
   &.mozilla {
     padding-top: 27px;
-    bottom: 123px;
+    top: auto;
+    bottom: -200px;
     left: 12px;
+
+    &.show {
+      bottom: 123px;
+      animation: wave-up .8s linear infinite alternate;
+    }
 
     & {
       &::after {
-				top: 66%;
-        box-shadow: 0px 4px 4px 0px var(--black-40);
+        top: 66%;
+        box-shadow: -4px 4px 4px 0px var(--black-40);
       }
     }
   }
-
-	&.show {
-		display: block;
-	}
 
   &__title {
     @include fontStyle(72, 72, 700);
@@ -57,5 +71,22 @@
   &__subtitle {
     @include fontStyle(12, 24);
     text-align: center;
+  }
+}
+
+@keyframes wave-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
+@keyframes wave-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
   }
 }

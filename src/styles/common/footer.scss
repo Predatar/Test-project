@@ -1,6 +1,8 @@
 .footer {
 	padding: 8px 0 10px;
 	background: var(--black);
+	@extend %relative;
+  z-index: 10;
 
 	&__copyright {
 		@include fontStyle(14, 27);
